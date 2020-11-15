@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Isaac-Kashiya</title>
+    <meta name="description" content="A bookmarker where you save your favourites links. Isaac Kashiya a Software Developer in Congo Kinshasa">
+    <meta name="keywords" content="Python and Django">
+    <meta name="author" content="Isaac Kashiya">
+    <!-- Bootstrap css file -->
+    {% load static %}
+<!--    <link rel="stylesheet" href="css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+<!--    <img src="{% static "my_app/example.jpg" %}" alt="My image">-->
+    <!-- font awesome icons -->
+<!--    <link rel="stylesheet" href="css/all.min.css" />-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/all.min.css' %}" />
+    <!-- Custom css file -->
+<!--    <link rel="stylesheet" href="css/style.css" />-->
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <div class="container-fluid">
+
+      <div class="row">
+        <div class="col-9 mx-auto m4">
+          <h1>{{ title }}</h1>
+          {% block content %}
+          Replace this value
+          {% endblock %}
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+          <div class="row">
+            <div class="logo">
+              Master Kashiya
+            </div>
+            <div class="social">
+              <div class="social">
+                <a href="https://web.facebook.com/cosmosdrc/?ref=bookmarks"><i class="fab fa-facebook"></i></a>
+                <a href="http://wa.me/243821242030"><i class="fab fa-whatsapp"></i></a>
+                <a href="https://app.netlify.com/teams/isaackashiya/sites"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/isaac-kashiya/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://app.netlify.com/teams/isaackashiya/sites"><i class="fab fa-facebook"></i></a>
+                <a href="https://app.netlify.com/teams/isaackashiya/sites"><i class="fab fa-pinterest"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+      <!-- End Footer -->
+      <!-- start Copyright -->
+      <div class="copyright">
+        <div class="container">
+          <p>&copy; 2020 copyright all right reserved</p>
+        </div>
+      </div>
+      <!-- End Copyright -->
+
+
+    <!-- Bootstrap js and Popper file -->
+<!--    <script src="js/jquery-3.2.1.slim.min.js"></script>-->
+    {% load static %}
+    <script src="{% static 'js/jquery-3.2.1.slim.min.js' %}"></script>
+<!--    <script src="js/popper.min.js"></script>-->
+    {% load static %}
+    <script src="{% static 'js/popper.min.js' %}"></script>
+<!--    <script src="js/bootstrap.min.js"></script>-->
+    {% load static %}
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- Custom JS file -->
+<!--    <script src="js/main.js"></script>-->
+    {% load static %}
+    <script src="{% static 'js/main.js' %}"></script>
+  </body>
+</html>

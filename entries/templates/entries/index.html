@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+    <div class="container p-3 my-3 bg-primary text-white"> <h1>Dear Diary</h1></div>
+
+<nav class="navbar navbar-expand-sm bg-light">
+
+  <!-- Links -->
+  <ul class="navbar-nav">
+    <li class="nav-item">
+      <a class="nav-link btn btn-primary bg" href="{% url 'add' %}">Enter A New Entry</a>
+    </li>
+  </ul>
+
+</nav>
+
+<div class="container">
+  <h2>Why write in a diary?</h2>
+  <p>Diary writing can be therapeutic, productive and creative.</p>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Why Do You Need A Diary ?</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for entry in entries %}
+        <tr>
+          <td>
+            <strong>{{ entry.date_posted }}</strong><br />
+            <p>{{ entry.text }}</p>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+<div class="jumbotron">
+        <h3>So, what exactly is a diary?</h3>
+        <p>
+          A diary is a place where you record events, experiences and other personal things that interest you. You can write about whatever you like, free of outside judgment or criticism. It should be an extension of your mind: safe and free. A diary can be whatever you decide and should be a place where you can be honest.
+There's no time like the present - start your free online journal today!
+        </p>
+<hr>
+<h3>Why write in a diary?</h3>
+        <p>
+          Diary writing can be therapeutic, productive and creative. If you have ever wanted a place to vent, reflect and grow, a diary is that place. Here are some top benefits of keeping a diary.
+        </p>
+      </div>
+{% endblock %}
